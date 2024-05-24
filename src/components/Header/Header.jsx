@@ -1,17 +1,25 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/" className="font-bold md:text-base text-gray-600">
+        <NavLink to="/" className="font-bold text-base text-neutral-500">
           Home
         </NavLink>
       </li>
       <li>
         <NavLink
+          to="/all-jobs"
+          className="font-bold text-base text-neutral-500"
+        >
+          All Jobs
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
           to="/applied-jobs"
-          className="font-bold md:text-base text-gray-600"
+          className="font-bold text-base text-neutral-500"
         >
           Applied Jobs
         </NavLink>
@@ -45,13 +53,18 @@ const Header = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost font-extrabold md:text-3xl">CareerHub</a>
+        <Link
+          to="/"
+          className="btn btn-ghost font-extrabold text-2xl md:text-3xl"
+        >
+          CareerHub
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-gradient-to-r from-indigo-400 to-violet-400 font-extrabold	md:text-xl text-white">
+        <a className="btn bg-gradient-to-r from-indigo-400 to-violet-400 font-extrabold	md:text-xl text-white w-3/6 md:w-auto">
           Start Applying
         </a>
       </div>

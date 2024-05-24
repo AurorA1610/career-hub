@@ -15,27 +15,27 @@ const SingleJob = ({ job }) => {
     salary,
   } = job;
   return (
-    <div className="border border-gray-400 rounded p-10">
+    <div className="m-6 md:m-0 border border-gray-400 rounded p-10">
       <img className="pb-9" src={logo} alt="" />
-      <h3 className="font-extrabold text-2xl">{job_title}</h3>
-      <h3 className="font-semibold text-xl text-gray-600 py-3">
+      <h3 className="font-extrabold text-2xl text-zinc-700">{job_title}</h3>
+      <h3 className="font-semibold text-xl text-neutral-500 py-3">
         {company_name}
       </h3>
-      <div className="md:flex">
-        <div className="text-indigo-400 border border-indigo-400 px-6 py-2 me-6 rounded font-extrabold text-base">
+      <div className="md:flex text-center">
+        <div className="text-violet-400 border border-indigo-400 px-6 py-2 me-6 rounded font-extrabold text-base w-full md:w-auto mb-4">
           {remote_or_onsite}
         </div>
-        <div className="text-indigo-400 border border-indigo-400 px-6 py-2 rounded font-extrabold text-base">
+        <div className="text-violet-400 border border-indigo-400 px-6 py-2 rounded font-extrabold text-base w-full md:w-auto mb-4">
           {job_type}
         </div>
       </div>
-      <div className="md:flex py-3">
-        <div className="font-semibold text-xl text-gray-600 me-8 flex items-center">
+      <div className="lg:flex py-3">
+        <div className="font-semibold text-lg	md:text-xl text-neutral-500 me-8 mb-4 lg:mb-0 flex items-center">
           <SlLocationPin /> <span className="ms-2">{location}</span>
         </div>
-        <div className="font-semibold text-gray-600 flex items-center">
-          <PiCurrencyCircleDollar className="text-2xl" />{" "}
-          <span className="ms-2 text-xl">Salary : {salary}</span>
+        <div className="font-semibold text-neutral-500 flex items-center">
+          <PiCurrencyCircleDollar className="text-xl	md:text-2xl" />{" "}
+          <span className="ms-2 text-lg	md:text-xl">Salary : {salary}</span>
         </div>
       </div>
       <Link

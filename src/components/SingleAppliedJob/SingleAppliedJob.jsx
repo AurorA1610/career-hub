@@ -27,10 +27,10 @@ const SingleAppliedJob = ({ job }) => {
               {company_name}
             </h3>
             <div className="md:flex text-center">
-              <div className="text-indigo-400 border border-indigo-400 px-6 py-2 me-6 rounded font-extrabold text-base w-full md:w-auto mb-4">
+              <div className="text-violet-400 border border-indigo-400 px-6 py-2 me-6 rounded font-extrabold text-base w-full md:w-auto mb-4">
                 {remote_or_onsite}
               </div>
-              <div className="text-indigo-400 border border-indigo-400 px-6 py-2 rounded font-extrabold text-base w-full md:w-auto mb-4">
+              <div className="text-violet-400 border border-indigo-400 px-6 py-2 rounded font-extrabold text-base w-full md:w-auto mb-4">
                 {job_type}
               </div>
             </div>
