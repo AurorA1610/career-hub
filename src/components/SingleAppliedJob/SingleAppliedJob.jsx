@@ -1,6 +1,7 @@
 import { PiCurrencyCircleDollar } from "react-icons/pi";
 import { SlLocationPin } from "react-icons/sl";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const SingleAppliedJob = ({ job }) => {
   const {
@@ -55,6 +56,10 @@ const SingleAppliedJob = ({ job }) => {
       </div>
     </div>
   );
+};
+
+SingleAppliedJob.propTypes = {
+  job: PropTypes.object,
 };
 
 export default SingleAppliedJob;
