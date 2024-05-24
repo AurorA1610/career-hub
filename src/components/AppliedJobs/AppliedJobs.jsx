@@ -62,13 +62,19 @@ const AppliedJobs = () => {
         </details>
       </div>
       <div className="my-16">
-        {displayAppliedJobs.map((job) => (
-          <SingleAppliedJob
-            key={job.id}
-            job={job}
-            handleJobsFilter
-          ></SingleAppliedJob>
-        ))}
+        {displayAppliedJobs.length ? (
+          displayAppliedJobs.map((job) => (
+            <SingleAppliedJob
+              key={job.id}
+              job={job}
+              handleJobsFilter
+            ></SingleAppliedJob>
+          ))
+        ) : (
+          <h1 className="text-lg md:text-2xl	font-bold text-neutral-500 text-center">
+            Sorry, we couldn&apos;t find any result!
+          </h1>
+        )}
       </div>
     </div>
   );
